@@ -28,9 +28,12 @@ gulp.task('copyGeneralFiles', ['deleteDistFolder'], function() {
     return gulp.src(pathsToCopy)
         .pipe(gulp.dest("./dist"));
 });
-
+// Delete dist folder
+gulp.task('deleteDocsFolder', function() {
+    return del('./docs');
+});
 // Copy  files for demo file
-gulp.task('createDemoFile', function() {
+gulp.task('createDemoFile', ['deleteDocsFolder'], function() {
 
 
     return gulp.src("./dist/**")

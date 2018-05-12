@@ -60,11 +60,15 @@
             margin: .3rem;
             border-radius: 50%;
             background-color: rgba($secondaryColor, 0.3);
+            transition: 0.3s;
             &.active {
                 background-color: #fff;
             }
             &:focus {
                 outline: none;
+            }
+            &:hover {
+                background-color: $mainColor;
             }
         }
     }
