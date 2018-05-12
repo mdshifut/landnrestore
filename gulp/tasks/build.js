@@ -29,6 +29,13 @@ gulp.task('copyGeneralFiles', ['deleteDistFolder'], function() {
         .pipe(gulp.dest("./dist"));
 });
 
+// Copy  files for demo file
+gulp.task('createDemoFile', function() {
+
+
+    return gulp.src("./dist/**")
+        .pipe(gulp.dest("./docs"));
+});
 
 // Optimize Images
 gulp.task('optimizeImage', ['deleteDistFolder'], function() {
