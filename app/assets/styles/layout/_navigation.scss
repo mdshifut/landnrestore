@@ -1,0 +1,36 @@
+.navigation {
+    background-color: $trinaryColor;
+    &__right-link {
+        a {
+            display: inline-block;
+            padding: .8rem 0 .8rem 1.2rem;
+            font-size: 1.6rem;
+            color: #191919;
+            text-decoration: none;
+            transition: 0.3s;
+            &:hover {
+                color: $mainColor;
+            }
+        }
+    }
+}
+
+.mainmenu {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    li {
+        display: inline-block;
+        a {
+            display: block;
+            padding: 1rem 1.2rem 1rem 0;
+            font-size: 1.4rem;
+            color: #191919;
+            text-decoration: none;
+            transition: 0.3s;
+            &:hover {
+                color: $mainColor;
+            }
+        }
+    }
+}

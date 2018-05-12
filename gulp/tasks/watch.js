@@ -25,12 +25,17 @@ gulp.task('watch', ['sass', 'scripts'], function() {
         gulp.start('scriptsRefresh');
     });
 
+
+
 });
 
-
+gulp.task('copyFonts', function() {
+    return gulp.src('./app/assets/fonts/**')
+        .pipe(gulp.dest('./app/temp/fonts/'));
+})
 
 gulp.task('cssInject', ['sass'], function() {
-    return gulp.src('./app/temp/styles/style.comp.css')
+    return gulp.src('./app/temp/styles/styles.css')
         .pipe(browserSync.stream());
 });
 

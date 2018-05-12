@@ -1,0 +1,30 @@
+.featured-item {
+    text-align: center;
+    background-color: #fff;
+    &__img {
+        height: 30rem;
+        background-size: cover;
+        background-position: center;
+        background-color: $mainColor;
+        &--1 {
+            background-image: url(../../assets/images/featured.jpg);
+        }
+        &--2 {
+            background-image: url(../../assets/images/featured2.jpg);
+        }
+        &--3 {
+            background-image: url(../../assets/images/featured3.jpg);
+        }
+    }
+    &__content {
+        padding: 2.5rem 2rem;
+    }
+    &__heading {
+        font-size: 3.2rem;
+        color: $mainColor;
+        padding-bottom: 4rem;
+    }
+    p {
+        font-size: 2rem;
+    }
+}

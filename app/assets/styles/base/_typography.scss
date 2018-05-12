@@ -1,4 +1,21 @@
-h1 {
-    color: red;
-    display: flex;
+html {
+    font-family: 'Open Sans', sans-serif;
+    // This defines what 1rem is
+    font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+}
+
+body {
+    font-size: 1.6rem;
+    color: $secondaryColor;
+    line-height: 1.8;
+    font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 400;
 }
