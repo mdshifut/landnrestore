@@ -13,6 +13,22 @@ gulp.task('deleteDistFolder', function() {
     return del('./dist');
 });
 
+// Copy Genarel files
+gulp.task('copyGeneralFiles', ['deleteDistFolder'], function() {
+    var pathsToCopy = [
+        './app/**/*',
+        '!./app/index.html',
+        '!./app/assets/images/**',
+        '!./app/assets/styles/**',
+        '!./app/assets/scripts/**',
+        '!./app/temp',
+        '!./app/temp/**'
+    ]
+
+    return gulp.src(pathsToCopy)
+        .pipe(gulp.dest("./dist"));
+});
+
 
 // Optimize Images
 gulp.task('optimizeImage', ['deleteDistFolder'], function() {
@@ -68,7 +84,9 @@ gulp.task('copyCompScripts', ['usemin'], function() {
 
 
 // Build production files, 
-gulp.task('build', ['deleteDistFolder', 'optimizeImage', 'usemin', 'copyCompStyles', 'copyCompScripts']);
+gulp.task('build', ['deleteDistFolder', 'copyGeneralFiles',
+    'optimizeImage', 'usemin', 'copyCompStyles', 'copyCompScripts'
+]);
 
 // Preview production file
 gulp.task('previewDist', function() {

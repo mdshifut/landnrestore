@@ -1,0 +1,73 @@
+.contact-content {
+    &__email {
+        color: $secondaryColor;
+        transition: 0.3s;
+        &:hover {
+            color: $mainColor;
+            text-decoration: none;
+        }
+    }
+    &__icons {
+        padding-top: 1rem;
+        a {
+            display: inline-block;
+            color: $secondaryColor;
+            font-size: 2.2rem;
+            padding: .8rem
+        }
+    }
+}
+
+.contact-form {
+    margin-top: 2rem;
+    @include desktop {
+        margin-top: 0;
+    }
+    input,
+    textarea {
+        width: 100%;
+        margin-bottom: 1.2rem;
+        border: 2px solid $secondaryColor;
+        padding: 1rem;
+        color: $secondaryColor;
+        transition: 0.3s;
+        &::placeholder {
+            color: $secondaryColor;
+        }
+        &:focus {
+            outline: none;
+            border-color: $mainColor;
+        }
+        &[type="submit"] {
+            background-color: $secondaryColor;
+            color: $trinaryColor;
+            border: none;
+            cursor: pointer;
+            &:hover {
+                background-color: $mainColor;
+            }
+        }
+    }
+    textarea {
+        min-height: 150px;
+    }
+    &__form-group {
+        overflow: hidden;
+        input {
+            float: left;
+            width: calc(50% - 1rem);
+            &[type="email"] {
+                margin-left: 2rem;
+            }
+        }
+    }
+}
+
+.status {
+    .green {
+        color: green;
+    }
+    .red {
+        color: red;
+    }
+}

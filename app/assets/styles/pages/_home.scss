@@ -3,7 +3,10 @@
         background-size: cover;
         background-position: center;
         background-color: $trinaryColor;
-        padding: 25rem 0;
+        padding: 10rem 0;
+        @include phone {
+            padding: 25rem 0;
+        }
         height: 100%;
         position: relative;
         z-index: 1;
@@ -20,11 +23,50 @@
         }
     }
     &__item--1 {
-        background-image: url(../../assets/images/slider1.jpg);
+        background-image: url(../images/slider1.jpg);
+    }
+    &__item--2 {
+        background-image: url(../images/slider2.jpg);
+    }
+    &__item--3 {
+        background-image: url(../images/slider3.jpeg);
+    }
+    &__item--4 {
+        background-image: url(../images/slider4.jpeg);
+    }
+    &__item--5 {
+        background-image: url(../images/slider5.jpg);
     }
     &__heading {
-        font-size: 7.2rem;
+        font-size: 3rem;
         color: $mainColor;
+        @include phone {
+            font-size: 4.2rem;
+        }
+        @include largeDesktop {
+            font-size: 7.2rem;
+        }
+    }
+    .owl-dots {
+        position: absolute;
+        left: 0;
+        bottom: 2rem;
+        width: 100%;
+        text-align: center;
+        .owl-dot {
+            display: inline-block;
+            height: 10px;
+            width: 10px;
+            margin: .3rem;
+            border-radius: 50%;
+            background-color: rgba($secondaryColor, 0.3);
+            &.active {
+                background-color: #fff;
+            }
+            &:focus {
+                outline: none;
+            }
+        }
     }
 }
 
@@ -32,7 +74,14 @@
     background-color: $trinaryColor;
 }
 
+.newslatter {
+    &__title {
+        font-size: 2rem;
+    }
+}
+
 .newslatter-form {
+    margin-top: 2rem;
     input {
         width: 100%;
         padding: .8rem 1rem;
@@ -46,6 +95,7 @@
         }
         &[type="submit"] {
             background-color: $secondaryColor;
+            border: none;
             color: $trinaryColor;
             cursor: pointer;
             &:hover {

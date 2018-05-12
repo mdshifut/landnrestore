@@ -1,3 +1,19 @@
+/* FONT PATH
+ * -------------------------- */
+
+$fa-font-path: "../fonts" !default;
+@font-face {
+    font-family: 'Droid Serif';
+    src: url('#{$fa-font-path}/DroidSerif.eot');
+    src: url('#{$fa-font-path}/DroidSerif.eot?#iefix') format('embedded-opentype'),
+    url('#{$fa-font-path}/DroidSerif.woff2') format('woff2'),
+    url('#{$fa-font-path}/DroidSerif.woff') format('woff'),
+    url('#{$fa-font-path}/DroidSerif.ttf') format('truetype'),
+    url('#{$fa-font-path}/DroidSerif.svg#DroidSerif') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 html {
     font-family: 'Open Sans', sans-serif;
     // This defines what 1rem is
@@ -18,4 +34,5 @@ h4,
 h5,
 h6 {
     font-weight: 400;
+    font-family: 'Droid Serif';
 }

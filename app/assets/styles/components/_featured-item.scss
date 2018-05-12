@@ -1,28 +1,46 @@
 .featured-item {
     text-align: center;
     background-color: #fff;
+    @include tabletMax {
+        margin: 1.5rem 0;
+    }
     &__img {
-        height: 30rem;
+        height: 20rem;
+        @include largeDesktop {
+            height: 30rem;
+        }
         background-size: cover;
         background-position: center;
         background-color: $mainColor;
         &--1 {
-            background-image: url(../../assets/images/featured.jpg);
+            background-image: url(../images/featured.jpg);
         }
         &--2 {
-            background-image: url(../../assets/images/featured2.jpg);
+            background-image: url(../images/featured2.jpg);
         }
         &--3 {
-            background-image: url(../../assets/images/featured3.jpg);
+            background-image: url(../images/featured3.jpg);
         }
     }
     &__content {
-        padding: 2.5rem 2rem;
+        padding: 2rem 1.5rem;
+        @include largeDesktop {
+            padding: 2.5rem 2rem;
+        }
+        font-family: 'Droid Serif';
     }
     &__heading {
-        font-size: 3.2rem;
+        font-size: 2rem;
+        padding-bottom: 2rem;
+        @include phone {
+            font-size: 2.5rem;
+            padding-bottom: 3rem;
+        }
+        @include largeDesktop {
+            font-size: 3.2rem;
+            padding-bottom: 4rem;
+        }
         color: $mainColor;
-        padding-bottom: 4rem;
     }
     p {
         font-size: 2rem;

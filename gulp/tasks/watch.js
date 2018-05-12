@@ -5,7 +5,7 @@ var gulp = require('gulp'),
 
 
 // Watch files for changes & reload
-gulp.task('watch', ['sass', 'scripts'], function() {
+gulp.task('watch', ['sass', 'scripts', 'copyFontsTemp', 'copyImagesTemp'], function() {
     browserSync.init({
         notify: false,
         server: {
@@ -25,14 +25,25 @@ gulp.task('watch', ['sass', 'scripts'], function() {
         gulp.start('scriptsRefresh');
     });
 
+    gulp.watch(['app/assets/fonts/**/*'], function() {
+        gulp.start('copyFontsTemp');
+    });
 
+    gulp.watch(['app/assets/images/**/*'], function() {
+        gulp.start('copyImagesTemp');
+    });
 
 });
 
-gulp.task('copyFonts', function() {
+gulp.task('copyFontsTemp', function() {
     return gulp.src('./app/assets/fonts/**')
         .pipe(gulp.dest('./app/temp/fonts/'));
-})
+});
+
+gulp.task('copyImagesTemp', function() {
+    return gulp.src('./app/assets/images/**')
+        .pipe(gulp.dest('./app/temp/images/'));
+});
 
 gulp.task('cssInject', ['sass'], function() {
     return gulp.src('./app/temp/styles/styles.css')

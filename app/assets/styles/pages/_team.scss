@@ -1,0 +1,44 @@
+.single-team {
+    overflow: hidden;
+    padding-top: 2rem;
+    @include tablet {
+        padding-top: 4rem;
+    }
+    &__thumb {
+        width: 12rem;
+        height: 12rem;
+        @include tablet {
+            width: 25rem;
+            height: 25rem;
+        }
+        float: left;
+        border-radius: 50%;
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    &__des {
+        float: left;
+        width: calc(100% - 12rem);
+        padding: 3.4rem 0 3.4rem 1.5rem;
+        @include tablet {
+            width: calc(100% - 25rem);
+            padding: 8.6rem 0 8.6rem 2rem;
+        }
+        h2 {
+            font-size: 1.5rem;
+            color: $mainColor;
+            @include tablet {
+                font-size: 3.2rem;
+            }
+        }
+        span {
+            font-size: 1.3rem;
+            @include tablet {
+                font-size: 2rem;
+            }
+        }
+    }
+}

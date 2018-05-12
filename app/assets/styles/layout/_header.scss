@@ -1,11 +1,17 @@
 .main-header {
     padding: 30px 0;
+    @include phoneMax {
+        text-align: center;
+    }
     &__logo {
         display: inline-block;
     }
     &__title {
         display: inline-block;
         padding-left: 10px;
-        font-size: 2.4rem;
+        font-size: 1.5rem;
+        @include tablet {
+            font-size: 2.4rem;
+        }
     }
 }

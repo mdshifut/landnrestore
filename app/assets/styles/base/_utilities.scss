@@ -1,5 +1,8 @@
 .section-padding {
-    padding: 7rem 0;
+    padding: 5rem 0;
+    @include phone {
+        padding: 7rem 0;
+    }
 }
 
 .pdb-small {
@@ -12,4 +15,18 @@
 
 .pdb-0 {
     padding-bottom: 0;
+}
+
+.pdt-medium {
+    padding-top: 4rem;
+}
+
+.section-heading {
+    font-size: 3.5rem;
+    color: $mainColor;
+    padding-bottom: 1.5rem;
+    @include phone {
+        font-size: 4.8rem;
+        padding-bottom: 2rem;
+    }
 }

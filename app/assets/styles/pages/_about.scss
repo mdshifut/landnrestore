@@ -1,0 +1,26 @@
+.bg-image {
+    position: relative;
+    &__content {
+        position: absolute;
+        top: 0;
+        right: 15px;
+        height: 100%;
+        width: 53%;
+        background-image: url(../images/about.jpg);
+        background-size: cover;
+        background-position: center;
+        @include tabletMax {
+            display: none;
+        }
+    }
+}
+
+.section-content {
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+    line-height: 1.6;
+    @include tablet {
+        padding-top: 9rem;
+        padding-bottom: 8rem;
+    }
+}
